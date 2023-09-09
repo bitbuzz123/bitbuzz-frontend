@@ -32,8 +32,8 @@ const Signup =()=>{
     }
 
     // Password validation
-    if (!password || password.length < 6) {
-      newErrors.password = 'Password must be at least 6 characters long';
+    if (!password || password.length < 8) {
+      newErrors.password = 'Password must be at least 8 characters long';
       valid = false;
     } else {
       newErrors.password = '';
@@ -57,7 +57,7 @@ const Signup =()=>{
     if (validateForm()) {
       const submit = async (e:SyntheticEvent) =>{
         e.preventDefault();
-        await fetch('https://localhost:8000/api/user',{
+        await fetch('https://localhost:8000/api/signupauth',{
           method : 'POST',
           headers:{'Content-Type':'application/json'},body:JSON.stringify({
             email  : email  ,

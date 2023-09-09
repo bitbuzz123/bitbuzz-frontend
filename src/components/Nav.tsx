@@ -28,7 +28,7 @@ const Nav =()=>{
     handleRedirect()
   }
   return(
-    <nav className="sticky-top">
+    <nav className="sticky-top bg-white">
     <div className="container-fluid">
       <div className="row">
         <div className="col">
