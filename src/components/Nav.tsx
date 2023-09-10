@@ -2,31 +2,6 @@ import React, { useState,SyntheticEvent } from "react";
 import { useNavigate } from "react-router-dom";
 
 const Nav =()=>{
-  const [email , setEmail] = useState('')
-  const [password , setPassword] = useState('')
-  const navigate = useNavigate();
-  const [redir , setRedirect] = useState(false)
-  const submit = async (e:SyntheticEvent) =>{
-    e.preventDefault();
-    await fetch('https://localhost:8000/api/user',{
-      method : 'POST',
-      headers:{'Content-Type':'application/json'},body:JSON.stringify({
-        email  : email  ,
-        password    : password
-      })
-    })
-    setRedirect(true)
-  }
-  const handleRedirect = () => {
-    navigate('/admin/products');
-  };
-
-  // Your component code here
-
-  // Example of how to trigger a redirect
-  if (redir){
-    handleRedirect()
-  }
   return(
     <nav className="sticky-top bg-white">
     <div className="container-fluid">

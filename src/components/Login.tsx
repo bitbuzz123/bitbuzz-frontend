@@ -1,5 +1,6 @@
 import React, { useState,SyntheticEvent } from "react";
 import Motto from "./Motto";
+import { signInWithGoogle } from "./Firebase";
 import Nav from "./Nav";
 
 
@@ -91,7 +92,7 @@ const Login =()=>{
             
             <div className="text-center">
               <hr/>
-              <button className="btn text-white col-12 buzzback mb-2"><img src="Gmail.png" alt="" />  Continue with google</button>
+              <button onClick={signInWithGoogle} className="btn text-white col-12 buzzback mb-2"><img src="Gmail.png"  alt="" />  Continue with google</button>
               <a href="/signup" className="text-decoration-none text-dark" style={{cursor: 'pointer'}} role="link">Don't have an account? <b className="buzztext">Sign up</b>
               </a>
               <img src="meeting.png" height={100} alt="" />
