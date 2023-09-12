@@ -1,6 +1,6 @@
 import { useState,SyntheticEvent } from "react";
-import Nav from "./Nav";
-import Motto from "./Motto";
+import Nav from "../components/Nav";
+import Motto from "../components/Motto";
 
 
 const Signup =()=>{

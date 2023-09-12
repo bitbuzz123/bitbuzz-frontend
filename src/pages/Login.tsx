@@ -1,7 +1,7 @@
 import React, { useState,SyntheticEvent } from "react";
-import Motto from "./Motto";
-import { signInWithGoogle } from "./Firebase";
-import Nav from "./Nav";
+import Motto from "../components/Motto";
+import { signInWithGoogle } from "../components/Firebase";
+import Nav from "../components/Nav";
 
 
 
